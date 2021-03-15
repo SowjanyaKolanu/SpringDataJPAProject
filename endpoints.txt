@@ -1,0 +1,38 @@
+There are 2 types of service listeners:
+1) Http listeners
+	-tomcat, jetty, jboss, weblogic, etc
+	-http protocol
+	-Process REST endpoints
+
+2) Messaging listeners
+	-ActiveMQ, RabbitMQ, Kafka, etc
+	-JMS, AMQP, MQTT, etc
+	-Process Message endpoints
+-----------------------------------
+There are 2 types of endpoints:
+1) REST Endpoints
+	- Need http listener such as tomcat, jetty, etc
+	- Accessed using http protocol
+	- Used in case of synchronous communication
+        Ex: http://localhost:8081/fares/get
+
+2) Messaging endpoints
+	- Need messaging listener such as ActiveMQ/RabbitMQ/Kafka, etc
+	- Accessed using JMS/AMQP/MQTT protocol
+	- Used in case of asynchronous communication
+ 	Ex: @RabbitListener(queues = "SearchQ")
+        Ex: template.convertAndSend("SearchQ", map);
+--------------------------------------------------------
+There are 2 types of communications:
+  1) Synchronous communication
+  2) Asynchronous communication
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+Project Architecture
+====================
+MVC with four-tier architecture consisting of:
+	1) View Layer [Spring MVC]
+
+	2) Controller Layer [handles http methods and contains endpoints]
+
+	3) Service Layer [business classes]
+		-business logic
+		-Composition and Decomposition of business objects
+		-Security
+
+	4) Model Layer [Spring JDBC | Spring HIBERNATE | Spring JPA | Spring DATA]
+		-Data classes / POJOs
+		-Dao Interfaces
+		-Dao Implementation classes
+

@@ -1,0 +1,41 @@
+http://dev.mysql.com/downloads/mysql/
+Click on "Archives"
+Click on "MySQL Community Server"
+Select version: 5.5.32
+Select Platform: Microsoft Windows
+
+If your system type is 32-bit, then download "Windows (x86, 32-bit), MSI Installer"
+If your system type is 64-bit, then download "Windows (x86, 64-bit), MSI Installer"
+
+Email: ramesh@aspirecareers.in
+Password: Aspire24
+
+Install MYSQL in "Typical" mode. 
+Then configure MYSQL in "Standard Configuation" mode.
+Check 'Include bin directory in windows PATH'
+The 'root' is default account. We have to enter password for root account. The suggested password is 'manager'.
+
+c:\> mysql -u root -p
+Enter Password: manager
+mysql>create database aspire;
+Database created
+mysql>use aspire
+Databse changed
+mysql>create table student(sno int, sname varchar(100), email varchar(100), mobile long);
+mysql>show tables;
+mysql>INSERT INTO STUDENT(SNO,SNAME,EMAIL,MOBILE) VALUES(1,"ramesh","ramesh@java2aspire.com", 7799208899);
+mysql>select * from student;
+
+References:
+1) http://www.cyberciti.biz/faq/howto-linux-unix-creating-database-and-table/
+2) http://www.roseindia.net/jdbc/jdbc-mysql/MysqlConnect.shtml
+3) http://www.javaworkspace.com/connectdatabase/connectMysql.do
+
+Download mysql jar from "http://mvnrepository.com/artifact/mysql/mysql-connector-java/5.1.36"
+
+Connection details
+==================
+driverClassName=  com.mysql.jdbc.Driver
+url= jdbc:mysql://localhost/test
+username= root
+password= manager
